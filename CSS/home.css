@@ -1,0 +1,39 @@
+/* home */
+.home {
+  width: auto;
+  height: 100vh;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../img/background4.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.text-box {
+  width: 90%;
+  color: #fff;
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.hero-btn {
+  display: inline-block;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-weight: 300;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+}
+.hero-btn:hover {
+  border: 1px solid #f44336;
+  background: #f44336;
+  color: #fff;
+  transition: 00.4s;
+}

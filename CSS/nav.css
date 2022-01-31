@@ -1,0 +1,364 @@
+* {
+  font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+}
+
+/* Variable */
+:root {
+  /* ===== color ===== */
+  --body-color: #e4e9f7;
+  --sidebar-color: #fff;
+  --primary-color: #695cfe;
+  --primary-color-light: #f6f5ff;
+  --toggle-color: #ddd;
+  --text-color: #707070;
+
+  /* ===== Transition ===== */
+  --tran-02: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.4s ease;
+  --tran-05: all 0.5s ease;
+}
+
+body {
+  height: 100vh;
+  background: var(--body-color);
+  transition: var(--tran-04);
+}
+body.dark {
+  /* ===== color ===== */
+  --body-color: #18191a;
+  --sidebar-color: #242526;
+  --primary-color: #3a3b3c;
+  --primary-color-light: #3a3b3c;
+  --toggle-color: #fff;
+  --text-color: #ccc;
+}
+/* ===== Sidebar ===== */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  padding: 10px 14px;
+  background: var(--sidebar-color);
+  transition: var(--tran-05);
+  z-index: 100;
+}
+.sidebar.close {
+  width: 0px;
+  left: -28px;
+}
+.sidebar.close .menu-bar i,
+.sidebar.close .image img {
+  opacity: 0;
+}
+/* ===== Resuable CSS ===== */
+
+.sidebar .text {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-color);
+  white-space: nowrap;
+  opacity: 1;
+  transition: var(--tran-05);
+}
+.sidebar.close .text {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+.menu-bar {
+  transition: var(--tran-05);
+}
+.image-text .image {
+  min-width: 65px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar header .image-text img {
+  width: 52px;
+  border-radius: 50%;
+}
+
+.sidebar li {
+  height: 50px;
+  margin-top: 10px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar li .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+  font-size: 20px;
+}
+
+.sidebar li .icon,
+.sidebar li .text {
+  color: var(--text-color);
+  transition: var(--tran-02);
+}
+
+.sidebar header {
+  position: relative;
+  transition: var(--tran-03);
+}
+
+.sidebar header .image-text {
+  display: flex;
+  align-items: center;
+}
+
+header .image-text .header-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-text .name {
+  font-weight: 600;
+}
+
+.header-text .profession {
+  margin-top: -2px;
+}
+
+.sidebar header .toggle {
+  position: absolute;
+  top: 50%;
+  right: -12%;
+  transform: translateY(-50%) rotate(180deg);
+  height: 50px;
+  width: 50px;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--sidebar-color);
+  font-size: 32px;
+  cursor: pointer;
+  transition: var(--tran-04);
+}
+.sidebar.close header .toggle {
+  transform: translateY(-50%);
+  left: 15px;
+}
+body.dark .sidebar header .toggle {
+  color: var(--text-color);
+}
+.sidebar.close .toggle {
+  right: -50%;
+}
+
+.sidebar .search-box {
+  background: var(--primary-color-light);
+  border-radius: 6px;
+}
+
+.menu-bar .search {
+  font-size: 1em;
+  font-weight: 500;
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  background: var(--primary-color-light);
+  transition: var(--tran-04);
+}
+.menu-links {
+  width: 84%;
+  height: 53%;
+}
+.sidebar .search-box {
+  margin-top: 0;
+  width: 84%;
+  height: 17%;
+  border-radius: 6px;
+  transition: var(--tran-04);
+  cursor: pointer;
+}
+
+.sidebar li a {
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  transition: var(--tran-04);
+}
+.sidebar li a:hover {
+  background: var(--primary-color);
+}
+
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text {
+  color: var(--sidebar-color);
+}
+body.dark .sidebar li a:hover .icon,
+body.dark .sidebar li a:hover .text {
+  color: var(--sidebar-color);
+}
+
+.sidebar .menu-bar {
+  height: calc(100% - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.menu-bar .mode {
+  position: relative;
+  background: var(--primary-color-light);
+  border-radius: 6px;
+  transition: var(--tran-04);
+}
+
+.menu-bar .mode .moon-sun {
+  height: 50px;
+  width: 65px;
+  display: flex;
+  align-items: center;
+}
+
+.menu-bar .mode i {
+  position: absolute;
+}
+
+.menu-bar .mode i.sun {
+  opacity: 0;
+}
+
+body.dark .menu-bar .mode i.sun {
+  opacity: 1;
+}
+
+body.dark .menu-bar .mode i.moon {
+  opacity: 0;
+}
+
+.menu-bar .mode .toggle-switch {
+  position: absolute;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  cursor: pointer;
+  background: var(--primary-color-light);
+  border-radius: 6px;
+}
+
+.toggle-switch .switch {
+  position: relative;
+  height: 22px;
+  width: 44px;
+  border-radius: 25px;
+  background: var(--toggle-color);
+  margin-left: 0px;
+}
+
+.switch::before {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  background: var(--sidebar-color);
+  transition: var(--tran-02);
+}
+
+body.dark .switch::before {
+  left: 24px;
+}
+
+.sidebar.close .menu-bar .mode i.sun {
+  opacity: 0;
+}
+/* home */
+.home {
+  position: relative;
+  height: 100vh;
+  background-color: var(--body-color);
+  transition: var(--tran-05);
+}
+
+.home .text {
+  font-size: 2em;
+  font-weight: 500;
+  color: var(--text-color);
+  padding: 16px 40px;
+}
+
+.text-box .inform h1 {
+  font-size: 42px;
+  font-weight: 500;
+  opacity: 0.8;
+}
+.text-box .inform .explain {
+  margin: 10px 0 5px;
+  font-size: 1em;
+  opacity: 0.7;
+}
+.text-box .inform .explain2 {
+  margin: 5px 0 40px;
+  font-size: 1em;
+  opacity: 0.7;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+}
+footer h4 {
+  margin-bottom: 25px;
+  margin-top: 20px;
+  font-size: 30px;
+  color: var(--text-color);
+  font-weight: 300;
+}
+footer p {
+  font-size: 15px;
+  color: var(--text-color);
+}
+.instagram {
+  margin: 0 13px;
+  cursor: pointer;
+  padding: 20px 0;
+  color: #f44336;
+}
+footer .made {
+  margin-bottom: 10px;
+}
+footer .instagram {
+  font-size: 25px;
+  color: #f44336;
+}
+
+/* about me */
+body.dark .sub-header h1 {
+  color: var(--text-color);
+}
+.about-me .info {
+  font-size: 0.9em;
+  color: var(--text-color);
+}
+.about-me .title {
+  font-size: 2em;
+  font-weight: 400;
+}
+body.dark .about-me .title {
+  color: var(--text-color);
+}

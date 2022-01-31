@@ -1,0 +1,59 @@
+/* About page */
+.sub-header {
+  height: 50vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../img/bg1.jpg);
+  background-position: -0px -300px;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+}
+.sub-header h1 {
+  padding-top: 70px;
+  font-size: 40px;
+  font-weight: 400;
+}
+.about-us {
+  width: 80%;
+  margin: auto;
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+.about-col {
+  display: flex;
+  padding: 30px 2px;
+}
+.about-me {
+  flex-basis: 98%;
+}
+.about-col img {
+  flex-basis: 82%;
+  margin-left: 15%;
+  width: 100%;
+}
+.about-col h1 {
+  padding-top: 0;
+}
+.about-col p {
+  padding: 15px 0 25px;
+}
+.red-btn {
+  border: 1px solid #f44336;
+  background: transparent;
+  color: #f44336;
+}
+.red-btn:hover {
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  .sub-header {
+    background-position: 0 0px;
+  }
+  .about-col img {
+    width: 300px;
+  }
+  .about-col {
+    flex-basis: 90%;
+  }
+}
