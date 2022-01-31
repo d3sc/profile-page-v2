@@ -19,16 +19,14 @@
   padding-top: 80px;
   padding-bottom: 100px;
 }
-.about-col {
+.about-us .row {
   display: flex;
+}
+.about-col {
+  flex-basis: 48%;
   padding: 30px 2px;
 }
-.about-me {
-  flex-basis: 98%;
-}
 .about-col img {
-  flex-basis: 82%;
-  margin-left: 15%;
   width: 100%;
 }
 .about-col h1 {
@@ -52,6 +50,9 @@
   }
   .about-col img {
     width: 300px;
+  }
+  .about-us .row {
+    display: block;
   }
   .about-col {
     flex-basis: 90%;

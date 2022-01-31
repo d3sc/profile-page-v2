@@ -351,11 +351,11 @@ footer .instagram {
 body.dark .sub-header h1 {
   color: var(--text-color);
 }
-.about-me .info {
+.info {
   font-size: 0.9em;
   color: var(--text-color);
 }
-.about-me .title {
+.title {
   font-size: 2em;
   font-weight: 400;
 }
