@@ -172,7 +172,7 @@ body.dark .sidebar header .toggle {
   border: none;
   border-radius: 6px;
   background: var(--primary-color-light);
-  transition: all 5s ease;
+  transition: all 2s ease;
 }
 .menu-links {
   width: 84%;
@@ -187,7 +187,7 @@ body.dark .sidebar header .toggle {
   cursor: pointer;
 }
 .sidebar.close .sidebar .search-box {
-  transition: all 5s ease;
+  transition: all 2s ease;
 }
 .sidebar li a {
   height: 100%;
