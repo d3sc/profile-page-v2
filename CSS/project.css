@@ -1,0 +1,110 @@
+/* Project Page */
+.nav-header {
+  height: 50vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../img/ngoding1.png);
+  background-position: -30px -100px;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+}
+
+.project {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+.project h1 {
+  margin-bottom: 20px;
+}
+.project p {
+  margin: 20px 40px 90px;
+}
+.project .row {
+  display: flex;
+  justify-content: space-between;
+}
+.project-col {
+  flex-basis: 31%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  text-align: left;
+}
+.project-col img {
+  width: 100%;
+  border-radius: 10px;
+}
+.project-col p {
+  margin: 0;
+  padding: 12px;
+  text-align: start;
+}
+.project-col h3 {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 20px;
+}
+/* Real Project */
+
+.real {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+.real-col {
+  display: flex; /* pakai flex display flex karena cuman 1 box, kalau dua atau lebih pakai flex-basis: 31%;*/
+  border-radius: 10px;
+  margin-bottom: 5%;
+  text-align: left;
+  justify-content: center;
+}
+.real h1 {
+  margin-bottom: 20px;
+}
+.real p {
+  margin-bottom: 50px;
+}
+.real-col img {
+  width: 365px;
+  border-radius: 10px;
+}
+.real-col p {
+  padding: 0;
+  font-size: 1em;
+}
+.real-col h3 {
+  font-size: 1.4em;
+  text-align: left;
+  font-weight: 400;
+  padding-left: 0px;
+}
+@media (max-width: 700px) {
+  .trip-header {
+    background-position: -80px 0px;
+  }
+  .trip-header h1 {
+    margin-top: 60px;
+  }
+  .project .row {
+    display: block;
+  }
+  .project-col {
+    margin-bottom: 50px;
+  }
+  .project-col img {
+    width: 280px;
+    display: block; /* Dipasang display block untuk dapat mengubah posisi dari gambar/elemen yang dipilih.*/
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 500px) {
+  .project-col img {
+    width: 300px;
+  }
+}

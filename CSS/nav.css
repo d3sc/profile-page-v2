@@ -54,6 +54,10 @@ body.dark {
 .sidebar.close .menu-bar i,
 .sidebar.close .image img {
   opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+.sidebar .image img {
+  transition: all 0.9s ease-in-out;
 }
 /* ===== Resuable CSS ===== */
 
@@ -144,17 +148,14 @@ header .image-text .header-text {
   color: var(--sidebar-color);
   font-size: 32px;
   cursor: pointer;
-  transition: var(--tran-04);
 }
 .sidebar.close header .toggle {
   transform: translateY(-50%);
   left: 15px;
+  right: -50%;
 }
 body.dark .sidebar header .toggle {
   color: var(--text-color);
-}
-.sidebar.close .toggle {
-  right: -50%;
 }
 
 .sidebar .search-box {
@@ -171,11 +172,11 @@ body.dark .sidebar header .toggle {
   border: none;
   border-radius: 6px;
   background: var(--primary-color-light);
-  transition: var(--tran-04);
+  transition: all 0.1s ease;
 }
 .menu-links {
   width: 84%;
-  height: 53%;
+  height: 83%;
 }
 .sidebar .search-box {
   margin-top: 0;
@@ -185,7 +186,9 @@ body.dark .sidebar header .toggle {
   transition: var(--tran-04);
   cursor: pointer;
 }
-
+.sidebar.close .sidebar .search-box {
+  transition: all 0.1s ease;
+}
 .sidebar li a {
   height: 100%;
   width: 100%;
@@ -286,7 +289,22 @@ body.dark .switch::before {
 .sidebar.close .menu-bar .mode i.sun {
   opacity: 0;
 }
-/* home */
+/* btn */
+body.dark .hero-btn:hover {
+  background-color: var(--sidebar-color);
+  border: 1px solid var(--primary-color-light);
+  box-shadow: 0 0 20px 0 var(--sidebar-color);
+}
+body.dark .red-btn {
+  color: var(--toggle-color);
+  border: 1px solid var(--toggle-color);
+}
+body.dark .red-btn:hover {
+  background-color: var(--sidebar-color);
+  border: 1px solid var(--primary-color-light);
+  box-shadow: 0 0 20px 0 var(--sidebar-color);
+}
+/* home Page */
 .home {
   position: relative;
   height: 100vh;
@@ -297,7 +315,6 @@ body.dark .switch::before {
 .home .text {
   font-size: 2em;
   font-weight: 500;
-  color: var(--text-color);
   padding: 16px 40px;
 }
 
@@ -316,7 +333,15 @@ body.dark .switch::before {
   font-size: 1em;
   opacity: 0.7;
 }
-
+body.dark .text-box .inform h1 {
+  color: var(--text-color);
+}
+body.dark .text-box .inform .explain {
+  color: var(--text-color);
+}
+body.dark .text-box .inform .explain2 {
+  color: var(--text-color);
+}
 footer {
   width: 100%;
   text-align: center;
@@ -346,8 +371,13 @@ footer .instagram {
   font-size: 25px;
   color: #f44336;
 }
+/* Card */
+body.dark .info-col {
+  color: var(--text-color);
+  background-color: var(--sidebar-color);
+}
 
-/* about me */
+/* about Page */
 body.dark .sub-header h1 {
   color: var(--text-color);
 }
@@ -355,10 +385,83 @@ body.dark .sub-header h1 {
   font-size: 0.9em;
   color: var(--text-color);
 }
-.title {
+body.dark .info .info-col:hover {
+  box-shadow: 0 0 20px 5px var(--primary-color-light);
+}
+.about-col .title {
   font-size: 2em;
   font-weight: 400;
 }
-body.dark .about-me .title {
+body.dark .about-col .title {
   color: var(--text-color);
 }
+
+/* Project Page */
+
+.nav-header h1 {
+  padding-top: 100px;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+body.dark .nav-header h1 {
+  color: var(--text-color);
+}
+
+.project h1 {
+  font-size: 2em;
+  font-weight: 400;
+}
+.project-col h3 {
+  font-size: 2em;
+  font-weight: 400;
+}
+.project p {
+  font-size: 1em;
+}
+.project-col p {
+  font-size: 1em;
+}
+body.dark .project h1 {
+  color: var(--text-color);
+}
+body.dark .project-col h3 {
+  color: var(--text-color);
+}
+
+body.dark .project p {
+  color: var(--text-color);
+}
+body.dark .project-col p {
+  color: var(--text-color);
+}
+
+/* Project-real Page */
+.real h1 {
+  font-size: 2em;
+  font-weight: 400;
+}
+.real p {
+  font-size: 1.1em;
+}
+
+body.dark .real h1 {
+  color: var(--text-color);
+}
+body.dark .real p {
+  color: var(--text-color);
+}
+
+/* transition */
+.menu-bar .search-box {
+  transition: all 0.4s ease-in-out;
+}
+.sidebar.close .search-box {
+  transition: all 0.2s ease;
+}
+
+.menu-bar .nav-link {
+  padding: 0px;
+}
+
+/* contact body */
